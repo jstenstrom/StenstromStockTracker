@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Centeralized Gambling</string>
+    <string name="title_activity_black_jack">BlackJack</string>
+    <string name="title_activity_stocks">Stocks</string>
+    <string name="title_activity_stats">Stats</string>
+    <string name="stockButt">Stocks</string>
+    <string name="blackjack_butt">Blackjack</string>
+    <string name="rules_butt">Rules</string>
+    <string name="title_activity_rules">RulesActivity</string>
+    <string name="stats_butt"> </string>
+    <string name="wait">Waiting...</string>
+</resources>

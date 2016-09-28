@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="stenstrom.jacob.gamblecenteral.BlackJack"
+    tools:showIn="@layout/activity_black_jack">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rules_butt"
+        android:id="@+id/button_rules"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="61dp"
+        android:onClick="reachRules"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stats_butt"
+        android:id="@+id/button_stats"
+        android:layout_above="@+id/button_rules"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your Hand:"
+        android:id="@+id/text_hand"
+        android:layout_above="@+id/button_stats"
+        android:layout_toRightOf="@+id/button_stats"
+        android:layout_toEndOf="@+id/button_stats" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/text_cards"
+        android:layout_alignTop="@+id/text_hand"
+        android:layout_toRightOf="@+id/text_hand"
+        android:layout_toEndOf="@+id/text_hand" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Raise 1"
+        android:id="@+id/button_raise_one"
+        android:layout_above="@+id/button_stats"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/text_hand"
+        android:layout_toStartOf="@+id/text_hand"
+        android:onClick="raise_One"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Raise 10"
+        android:id="@+id/button_raise_ten"
+        android:layout_above="@+id/button_raise_one"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="raise_Ten"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your Bet:"
+        android:id="@+id/text_Bet"
+        android:layout_above="@+id/button_rules"
+        android:layout_toRightOf="@+id/button_rules"
+        android:layout_toEndOf="@+id/button_rules" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/text_pot"
+        android:layout_alignTop="@+id/text_Bet"
+        android:layout_toRightOf="@+id/text_Bet"
+        android:layout_toEndOf="@+id/text_Bet" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Opponent had:"
+        android:id="@+id/text_oppHand"
+        android:layout_marginBottom="89dp"
+        android:layout_above="@+id/button_raise_ten"
+        android:layout_toLeftOf="@+id/text_cards"
+        android:layout_toStartOf="@+id/text_cards" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/text_dealCard"
+        android:layout_alignBottom="@+id/text_oppHand"
+        android:layout_toRightOf="@+id/text_oppHand"
+        android:layout_toEndOf="@+id/text_oppHand" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hit"
+        android:id="@+id/button_hit"
+        android:layout_below="@+id/text_dealCard"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="hit"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stand"
+        android:id="@+id/button_stand"
+        android:layout_below="@+id/button_hit"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="stand"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Chips Left: "
+        android:id="@+id/textView13"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/text_chips"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView13"
+        android:layout_toEndOf="@+id/textView13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/text_winlose"
+        android:layout_below="@+id/textView13"
+        android:layout_alignLeft="@+id/text_oppHand"
+        android:layout_alignStart="@+id/text_oppHand"
+        android:layout_marginTop="45dp" />
+
+</RelativeLayout>
